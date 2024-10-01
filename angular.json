@@ -17,7 +17,7 @@
 				"build": {
 					"builder": "ngx-build-plus:browser",
 					"options": {
-						"outputPath": "dist/angular-host-module-federation",
+						"outputPath": "dist/angular_host_moduleFederaion",
 						"index": "src/index.html",
 						"polyfills": [
 							"zone.js"
@@ -107,8 +107,5 @@
 				}
 			}
 		}
-	},
-	"cli": {
-		"analytics": false
 	}
 }

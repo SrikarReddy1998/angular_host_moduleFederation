@@ -27,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      library: { type: "module" },
+      // library: { type: "module" },
 
       // For remotes (please adjust)
       // name: "angularHostModuleFederation",
@@ -37,10 +37,9 @@ module.exports = {
       // },
 
       // For hosts (please adjust)
-      // remotes: {
-      //     "mfe1": "http://localhost:3000/remoteEntry.js",
-
-      // },
+      remotes: {
+        childData: "child@http://localhost:4201/remoteEntry.js",
+      },
 
       shared: share({
         "@angular/core": {
