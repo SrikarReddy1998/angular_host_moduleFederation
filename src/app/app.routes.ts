@@ -14,16 +14,16 @@ export const routes: Routes = [
         .catch((err) => console.log(err, 'component'));
     },
   },
-  //   {
-  //     path: 'child-module',
-  //     loadChildren: () => {
-  //       return loadRemoteModule({
-  //         remoteEntry: 'http://localhost:4201/remoteEntry.js',
-  //         remoteName: 'angularChild',
-  //         exposedModule: './angularChild',
-  //       })
-  //         .then((m) => m.ChildMModule)
-  //         .catch((err) => console.log(err));
-  //     },
-  //   },
+  {
+    path: 'child-module',
+    loadChildren: () => {
+      return loadRemoteModule({
+        remoteEntry: 'http://localhost:4201/remoteEntry.js',
+        remoteName: 'angularChildModuleFederation',
+        exposedModule: './childModuleAnyName',
+      })
+        .then((m) => m.ChildMModule)
+        .catch((err) => console.log(err));
+    },
+  },
 ];
