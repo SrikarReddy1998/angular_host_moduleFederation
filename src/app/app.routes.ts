@@ -60,7 +60,7 @@ export const routes: Routes = [
     path: 'react',
     component: WebComponentWrapper,
     data: {
-      // type: 'module',
+      type: 'module',
       remoteEntry: 'http://localhost:4173/assets/remoteEntry.js',
       remoteName: 'components-app',
       exposedModule: './ExposingButton',

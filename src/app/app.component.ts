@@ -13,6 +13,6 @@ export class AppComponent {
   title = 'angular_host_moduleFederation';
   constructor(private router: Router) {}
   routeTo() {
-    this.router.navigate(['/child-repo-component']);
+    this.router.navigate(['/react']);
   }
 }
