@@ -27,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      // library: { type: "module" },
+      library: { type: "module" },
 
       // For remotes (please adjust)
       // name: "angularHostModuleFederation",
@@ -39,6 +39,11 @@ module.exports = {
       // For hosts (please adjust)
       remotes: {
         childData: "child@http://localhost:4201/remoteEntry.js",
+        angularNative: "angularNative@http://localhost:4222/remoteEntry.js",
+        angularNativeChild:
+          "angularNativeChild@http://localhost:4223/remoteEntry.json",
+        anyModuleName:
+          "anyModuleName@http://localhost:4173/assets/remoteEntry.js",
       },
 
       shared: share({
